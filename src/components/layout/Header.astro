@@ -1,3 +1,7 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
 <header class="w-full px-4 pt-4 max-w-5xl mx-auto">
     <nav class="flex items-center justify-between flex-wrap">
         <div class="flex gap-2 items-center">
@@ -28,13 +32,24 @@
             </a>
         </div>
 
-        <ul id="nav-menu" class="flex w-auto mt-0 space-x-2">
+        <ul id="nav-menu" class="flex gap-4 w-auto mt-0 space-x-2">
             <li>
                 <a
                     href="https://github.com/iwa"
-                    class="hover:text-violet-800 transition duration-150 ease-in-out"
-                    >Github</a
-                >
+                    class="hover:text-violet-800 transition duration-150 ease-in-out flex items-center gap-1"
+                    >
+                    <Icon name="ri:github-line" />
+                    <span>Github</span>
+                </a>
+            </li>
+            <li>
+                <a
+                    href="https://www.linkedin.com/in/pbastard"
+                    class="hover:text-violet-800 transition duration-150 ease-in-out flex items-center gap-1"
+                    >
+                    <Icon name="ri:linkedin-line" />
+                    <span>Linkedin</span>
+                </a>
             </li>
         </ul>
     </nav>
