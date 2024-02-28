@@ -1,10 +1,10 @@
 ---
-import { Icon } from 'astro-icon/components'
+import { Icon } from 'astro-icon/components';
 ---
 
-<header class="w-full px-4 pt-4 max-w-5xl mx-auto">
-    <nav class="flex items-center justify-between flex-wrap">
-        <div class="flex gap-2 items-center">
+<header class="mx-auto w-full max-w-5xl px-4 pt-4">
+    <nav class="flex flex-wrap items-center justify-between">
+        <div class="flex items-center gap-2">
             <a href="mailto:contact@iwa.sh" aria-label="email">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -24,20 +24,15 @@ import { Icon } from 'astro-icon/components'
                     ></path>
                 </svg>
             </a>
-            <a
-                href="/"
-                class="flex items-center font-bold"
-            >
-                iwa
-            </a>
+            <a href="/" class="flex items-center font-bold"> iwa </a>
         </div>
 
-        <ul id="nav-menu" class="flex gap-4 w-auto mt-0 space-x-2">
+        <ul id="nav-menu" class="mt-0 flex w-auto gap-4 space-x-2">
             <li>
                 <a
                     href="https://github.com/iwa"
-                    class="hover:text-violet-800 transition duration-150 ease-in-out flex items-center gap-1"
-                    >
+                    class="flex items-center gap-1 transition duration-150 ease-in-out hover:text-violet-800"
+                >
                     <Icon name="ri:github-line" />
                     <span>Github</span>
                 </a>
@@ -45,8 +40,8 @@ import { Icon } from 'astro-icon/components'
             <li>
                 <a
                     href="https://www.linkedin.com/in/pbastard"
-                    class="hover:text-violet-800 transition duration-150 ease-in-out flex items-center gap-1"
-                    >
+                    class="flex items-center gap-1 transition duration-150 ease-in-out hover:text-violet-800"
+                >
                     <Icon name="ri:linkedin-line" />
                     <span>Linkedin</span>
                 </a>

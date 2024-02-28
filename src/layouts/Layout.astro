@@ -1,9 +1,9 @@
 ---
-import Header from "../components/layout/Header.astro";
-import Footer from "../components/layout/Footer.astro";
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -12,10 +12,10 @@ import Footer from "../components/layout/Footer.astro";
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <title>Pierre Bastard・Portfolio</title>
     </head>
-    <body class="flex flex-col min-h-screen bg-white">
+    <body class="flex min-h-screen flex-col bg-white">
         <Header />
 
-        <main class="flex-1 mx-4 md:mx-12 lg:mx-24 mt-8 sm:mt-16">
+        <main class="mx-4 mt-8 flex-1 sm:mt-16 md:mx-12 lg:mx-24">
             <slot />
         </main>
 
@@ -27,6 +27,6 @@ import Footer from "../components/layout/Footer.astro";
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
 
     body {
-        font-family: "Inter", sans-serif;
+        font-family: 'Inter', sans-serif;
     }
 </style>

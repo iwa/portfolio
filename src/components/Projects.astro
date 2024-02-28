@@ -2,43 +2,62 @@
 import type { Project } from '../types/Project';
 
 const projects: Project[] = [
-    { name: "Kubic Architecture", image: "/img/projects/kubic.webp", link: "https://kubic-architecture.com", description: "" },
-    { name: "Carré Construction", image: "/img/projects/carre.webp", link: "https://carre-construction.com", description: "" },
-    { name: "Kwako", image: "/img/projects/kwako.webp", link: null, description: "General-purpose Discord bot, it was made by using Q-Bot as a base." },
-    { name: "Q-Bot", image: "/img/projects/q-bot.webp", link: 'https://github.com/iwa/Q-Bot', description: "Discord bot created for the old Qumu Discord server. It was my first real 'serious' project." }
+    {
+        name: 'Kubic Architecture',
+        image: '/img/projects/kubic.webp',
+        link: 'https://kubic-architecture.com',
+        description: '',
+    },
+    {
+        name: 'Carré Construction',
+        image: '/img/projects/carre.webp',
+        link: 'https://carre-construction.com',
+        description: '',
+    },
+    {
+        name: 'Kwako',
+        image: '/img/projects/kwako.webp',
+        link: null,
+        description:
+            'General-purpose Discord bot, it was made by using Q-Bot as a base.',
+    },
+    {
+        name: 'Q-Bot',
+        image: '/img/projects/q-bot.webp',
+        link: 'https://github.com/iwa/Q-Bot',
+        description:
+            "Discord bot created for the old Qumu Discord server. It was my first real 'serious' project.",
+    },
 ];
 ---
 
 <div class="pb-6">
-    <div class="text-3xl font-bold mb-8">Projects</div>
-<section
-    class="grid grid-cols-2 md:grid-cols-3 gap-4 my-8 max-w-5xl mx-auto"
-    style="min-height: 300px"
->
-
-    {
-        projects.map((item, index) => (
-            <div class="relative row-span-2 shadow-sm md:shadow-2xl">
-                <img
-                    class="rounded object-cover w-full h-full"
-                    loading="lazy"
-                    src={ item.image }
-                />
-                <div class="absolute top-0 left-0 rounded w-full h-full bg-black bg-opacity-35 flex flex-col items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-200 backdrop-blur-md">
-                    <a
-                        class="px-6 py-2 rounded-full bg-gray-900 text-gray-50 font-bold"
-                        href={ item.link ? item.link : 'javascript:void(0);' }
-                        target={ item.link ? '_blank' : '_self' }
-                        rel="noopener noreferrer"
-                    >
-                        { item.name }
-                    </a>
-                    <p class="text-gray-50 py-2 px-6">
-                        { item.description }
-                    </p>
+    <div class="mb-8 text-3xl font-bold">Projects</div>
+    <section
+        class="mx-auto my-8 grid max-w-5xl grid-cols-2 gap-4 md:grid-cols-3"
+        style="min-height: 300px"
+    >
+        {
+            projects.map((item, index) => (
+                <div class="relative row-span-2 shadow-sm md:shadow-2xl">
+                    <img
+                        class="h-full w-full rounded object-cover"
+                        loading="lazy"
+                        src={item.image}
+                    />
+                    <div class="absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center rounded bg-black bg-opacity-35 opacity-0 backdrop-blur-md transition-opacity duration-200 hover:opacity-100">
+                        <a
+                            class="rounded-full bg-gray-900 px-6 py-2 font-bold text-gray-50"
+                            href={item.link ? item.link : 'javascript:void(0);'}
+                            target={item.link ? '_blank' : '_self'}
+                            rel="noopener noreferrer"
+                        >
+                            {item.name}
+                        </a>
+                        <p class="px-6 py-2 text-gray-50">{item.description}</p>
+                    </div>
                 </div>
-            </div>
-        ))
-    }
-</section>
+            ))
+        }
+    </section>
 </div>

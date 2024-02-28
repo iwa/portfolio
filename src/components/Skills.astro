@@ -1,64 +1,63 @@
 ---
-import { Icon } from 'astro-icon/components'
+import { Icon } from 'astro-icon/components';
 
 const skills = [
-    { name: "HTML", icon: "ri:code-fill" },
-    { name: "CSS", icon: "ri:palette-fill" },
-    { name: "JavaScript", icon: "ri:javascript-fill" },
-    { name: "TypeScript", icon: "simple-icons:typescript" },
-    { name: "Astro", icon: "simple-icons:astro" },
-    { name: "React", icon: "ri:reactjs-fill" },
-    { name: "Vue", icon: "ri:vuejs-fill" },
-    { name: "Node.js", icon: "ri:nodejs-fill" },
-    { name: "Fastify", icon: "ri:server-fill" },
-    { name: "Express", icon: "ri:server-fill" },
-    { name: "MongoDB", icon: "ri:database-fill" },
-    { name: "MySQL", icon: "ri:database-fill" },
-    { name: "Git", icon: "ri:git-fork-fill" },
-    { name: "GitHub", icon: "ri:github-fill" },
-    { name: "Gitea", icon: "simple-icons:gitea" },
-    { name: "GitLab", icon: "ri:gitlab-fill" },
-    { name: "Figma", icon: "ri:pen-nib-fill" },
-    { name: "Adobe After Effects", icon: "simple-icons:adobecreativecloud" },
-    { name: "Adobe Lightroom", icon: "simple-icons:adobecreativecloud" },
-    { name: "Microsoft Office", icon: "ri:microsoft-fill" },
-    { name: "Google Workspace", icon: "ri:google-fill" },
-    { name: "Windows", icon: "ri:windows-fill" },
-    { name: "MacOS", icon: "ri:apple-fill" },
-    { name: "Linux", icon: "simple-icons:linux" },
+    { name: 'HTML', icon: 'ri:code-fill' },
+    { name: 'CSS', icon: 'ri:palette-fill' },
+    { name: 'JavaScript', icon: 'ri:javascript-fill' },
+    { name: 'TypeScript', icon: 'simple-icons:typescript' },
+    { name: 'Astro', icon: 'simple-icons:astro' },
+    { name: 'React', icon: 'ri:reactjs-fill' },
+    { name: 'Vue', icon: 'ri:vuejs-fill' },
+    { name: 'Node.js', icon: 'ri:nodejs-fill' },
+    { name: 'Fastify', icon: 'ri:server-fill' },
+    { name: 'Express', icon: 'ri:server-fill' },
+    { name: 'MongoDB', icon: 'ri:database-fill' },
+    { name: 'MySQL', icon: 'ri:database-fill' },
+    { name: 'Git', icon: 'ri:git-fork-fill' },
+    { name: 'GitHub', icon: 'ri:github-fill' },
+    { name: 'Gitea', icon: 'simple-icons:gitea' },
+    { name: 'GitLab', icon: 'ri:gitlab-fill' },
+    { name: 'Figma', icon: 'ri:pen-nib-fill' },
+    { name: 'Adobe After Effects', icon: 'simple-icons:adobecreativecloud' },
+    { name: 'Adobe Lightroom', icon: 'simple-icons:adobecreativecloud' },
+    { name: 'Microsoft Office', icon: 'ri:microsoft-fill' },
+    { name: 'Google Workspace', icon: 'ri:google-fill' },
+    { name: 'Windows', icon: 'ri:windows-fill' },
+    { name: 'MacOS', icon: 'ri:apple-fill' },
+    { name: 'Linux', icon: 'simple-icons:linux' },
 ];
 
 const courses = [
     {
-        name: "Software Engineer",
-        provider: "Frontend Developer",
-        duration: "2019 - Present",
+        name: 'Software Engineer',
+        provider: 'Frontend Developer',
+        duration: '2019 - Present',
     },
     {
-        name: "Software Engineer",
-        provider: "Frontend Developer",
-        duration: "2019 - Present",
+        name: 'Software Engineer',
+        provider: 'Frontend Developer',
+        duration: '2019 - Present',
     },
     {
-        name: "Software Engineer",
-        provider: "Frontend Developer",
-        duration: "2019 - Present",
+        name: 'Software Engineer',
+        provider: 'Frontend Developer',
+        duration: '2019 - Present',
     },
 ];
-
 ---
 
-<section class="my-4 max-w-5xl mx-auto">
-    <div class="text-3xl font-bold mb-8">Skills</div>
+<section class="mx-auto my-4 max-w-5xl">
+    <div class="mb-8 text-3xl font-bold">Skills</div>
 
     <div class="flex flex-wrap gap-2">
-    {
-        skills.map((item, index) => (
-            <div class="flex items-center text-xl font-light my-1 px-4 py-2 rounded-full border-2 border-transparent bg-gray-200 text-gray-700 hover:bg-transparent hover:text-purple-400 hover:border-purple-400 transition-colors duration-200">
-                <Icon name={item.icon} />
-                <span class="ml-2">{item.name}</span>
-            </div>
-        ))
-    }
+        {
+            skills.map((item, index) => (
+                <div class="my-1 flex items-center rounded-full border-2 border-transparent bg-gray-200 px-4 py-2 text-xl font-light text-gray-700 transition-colors duration-200 hover:border-purple-400 hover:bg-transparent hover:text-purple-400">
+                    <Icon name={item.icon} />
+                    <span class="ml-2">{item.name}</span>
+                </div>
+            ))
+        }
     </div>
 </section>
