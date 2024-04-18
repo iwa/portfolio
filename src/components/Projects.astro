@@ -1,23 +1,38 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 import type { Project } from '../types/Project';
 
 const projects: Project[] = [
     {
+        name: 'WomHand',
+        image: '/img/projects/womhand.webp',
+        link: undefined,
+        description: 'Final year project in my Engineer school. Project in partnership with the LADAPT association. Website designed to help women with disabilities seeking to find adapted jobs.',
+    },
+    {
         name: 'Kubic Architecture',
         image: '/img/projects/kubic.webp',
         link: 'https://kubic-architecture.com',
-        description: '',
+        description: 'Website created for Kubic Architecture. Made with Astro, Tailwind CSS, VueJS & Strapi.',
     },
     {
         name: 'Carré Construction',
         image: '/img/projects/carre.webp',
         link: 'https://carre-construction.com',
-        description: '',
+        description: 'Website created for Carré Construction. Made with Astro & Tailwind CSS.',
+    },
+    {
+        name: 'Homelab',
+        image: '/img/projects/homelab.webp',
+        link: 'https://wiki.iwa.sh',
+        description:
+            'Since 2019, I began self-hosting my own services on a little Debian VPS. Nowadays, I have 2 servers at home. I\'m learning a lot through my journey, and loving every bit of it. Self-hosting has become one of my core passion.',
     },
     {
         name: 'Kwako',
         image: '/img/projects/kwako.webp',
-        link: null,
+        link: undefined,
         description:
             'General-purpose Discord bot, it was made by using Q-Bot as a base.',
     },
@@ -47,12 +62,12 @@ const projects: Project[] = [
                     />
                     <div class="absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center rounded bg-black bg-opacity-35 opacity-0 backdrop-blur-md transition-opacity duration-200 hover:opacity-100">
                         <a
-                            class="rounded-full bg-gray-900 px-6 py-2 font-bold text-gray-50"
+                            class="rounded-full bg-gray-900 px-6 py-2 font-bold text-gray-50 flex justify-center items-center gap-1"
                             href={item.link ? item.link : 'javascript:void(0);'}
                             target={item.link ? '_blank' : '_self'}
                             rel="noopener noreferrer"
                         >
-                            {item.name}
+                            {item.name} { (item.link != undefined) ? (<Icon name="ri:external-link-line" />) : "" }
                         </a>
                         <p class="px-6 py-2 text-gray-50">{item.description}</p>
                     </div>
